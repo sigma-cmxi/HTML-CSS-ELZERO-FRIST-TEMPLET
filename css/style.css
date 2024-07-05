@@ -1,0 +1,673 @@
+:root {
+    --primary-colour: #10cab7;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+}
+
+header {
+    background-color: white;
+    padding: 20px 0 0 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    height: 50px;
+    align-items: center;
+}
+
+@media (max-width: 1000px) {
+    header .container {
+        width: 90%;
+    }
+}
+
+header .container .links {
+    position: relative;
+}
+
+header .container img {
+    display: inline-block;
+    width: 70px;
+    height: auto;
+}
+
+header .container .icn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 30px;
+    align-content: center;
+    align-items: baseline;
+}
+
+header .container .icn span {
+    display: block;
+    height: 3px;
+    margin-bottom: 5px;
+    background-color: black;
+    width: 100%;
+}
+
+header .container .icn span:nth-of-type(2) {
+    width: 18px;
+    transition: width .3s ease-in;
+}
+
+header .container .links:hover span:nth-of-type(2) {
+    width: 30px;
+}
+
+header .container .list {
+    position: absolute;
+    left: -147px;
+    top: 25px;
+    display: none;
+    z-index: 1;
+}
+
+header .container .list::before {
+    content: "";
+    position: absolute;
+    background-color: #efefef;
+    width: 25px;
+    height: 25px;
+    left: 150px;
+    top: 5px;
+    transform: rotate(45deg);
+}
+
+header .container .links:hover .list {
+    display: block;
+}
+
+header .container .list ul {
+    list-style: none;
+    background-color: #efefef;
+    width: 180px;
+    height: fit-content;
+    padding: 0px;
+
+}
+
+header .container .list ul li {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 2px solid #dfdfdf;
+}
+
+header .container .list ul li:last-child {
+    border-bottom: none;
+}
+
+header .container .list ul a {
+    color: #333;
+    text-decoration: none;
+    transition: padding-left .5s ease;
+}
+
+header .container .list ul a:hover {
+    padding-left: 15px;
+}
+
+.landing {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 70px);
+}
+
+.landing img {
+    margin-top: 20px;
+    width: 100%;
+    height: 102%;
+}
+
+.landing .txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -69%);
+}
+
+.landing .txt h1 {
+    text-align: center;
+    color: var(--primary-colour);
+    padding-left: 2px;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.landing .txt p {
+    text-align: center;
+    font-size: 1.2rem;
+    width: 325px;
+    line-height: 35px;
+}
+
+@media screen and (min-width: 1px) and (max-width: 641px) {
+    .landing .txt h1 {
+        font-size: 3rem;
+    }
+
+    .landing .txt p {
+        font-size: .9rem;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1000px) {
+    .landing .txt h1 {
+        font-size: 3.3rem;
+    }
+
+    .landing .txt p {
+        font-size: 1.1rem;
+    }
+}
+
+.fuitures {
+    margin-top: 20px;
+    background-color: #f6f6f6;
+    height: fit-content;
+}
+
+.fuitures .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.fuitures .container div {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.fuitures .container div:last-child {
+    margin-bottom: 30px;
+}
+
+.fuitures .container div i {
+    color: var(--primary-colour);
+    font-size: 3.8rem;
+    padding-bottom: 10px;
+}
+
+.fuitures .container div h3 {
+    padding-bottom: 5px;
+    font-weight: bolder;
+}
+
+.fuitures .container div p {
+    max-width: 322px;
+    line-height: 32px;
+}
+
+.Services {
+    background-color: white;
+    height: fit-content;
+    width: 100%;
+    margin: auto;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.Services h2 {
+    position: relative;
+    margin: 0;
+    margin-top: 40px;
+    width: fit-content;
+    padding: 0;
+    font-weight: bold;
+    font-size: 6rem;
+    letter-spacing: -4px;
+    color: #dddddde0;
+}
+
+.Services h2::after {
+    content: "Don't be busy, be productive";
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translateX(-50%);
+    width: max-content;
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    letter-spacing: normal;
+    color: black;
+    font-size: 1.3rem;
+}
+
+@media screen and (min-width: 1px) and (max-width: 641px) {
+    .Services h2 {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1000px) {
+    .Services h2 {
+        font-size: 5rem;
+    }
+}
+
+.Services .container {
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 100px auto 0;
+    gap: 30px;
+}
+
+.Services .container .col div {
+    padding-bottom: 20px;
+}
+
+.Services .container i {
+    font-size: 1.8rem;
+    color: var(--primary-colour);
+}
+
+.Services .container h4 {
+    font-size: 1.2rem;
+}
+
+.Services .container p {
+    color: #9b9b9b;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.Services .container img {
+    position: relative;
+    width: 260px;
+    z-index: 1;
+}
+
+.Services .container .img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.Services .container .img::after {
+    content: "";
+    background-color: #2c4755;
+    width: 100px;
+    height: calc(100% + 100px);
+    top: -50px;
+    position: absolute;
+    right: 0;
+}
+
+@media screen and (min-width: 1px) and (max-width: 641px) {
+    .Services .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .Services .container img,
+    .Services .container .img::after {
+        display: none;
+    }
+
+    .Services .container i {
+        font-size: 2.5rem;
+    }
+
+    .Services .container h4 {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1000px) {
+    .Services .container {
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+
+    .Services .container img,
+    .Services .container .img::after {
+        display: none;
+    }
+}
+
+.protofolio {
+    background-color: #f6f6f6;
+    height: fit-content;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.protofolio h2 {
+    position: relative;
+    margin: 0;
+    margin-top: 40px;
+    width: fit-content;
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 5.5rem;
+    letter-spacing: -4px;
+    color: #dddddde0;
+}
+
+.protofolio h2::after {
+    content: "If you do it right, it will last forever.";
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    width: max-content;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    letter-spacing: normal;
+    color: black;
+    font-size: 1.3rem;
+}
+
+@media screen and (min-width: 1px) and (max-width: 641px) {
+    .protofolio h2 {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1000px) {
+    .protofolio h2 {
+        font-size: 5rem;
+    }
+}
+
+.protofolio .container {
+    width: 100%;
+    padding: 0 40px;
+    margin: 100px auto 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.protofolio .container div {
+    width: calc((100% - 60px) / 3);
+    background-color: white;
+}
+
+.protofolio .container img {
+    max-width: 100%;
+}
+
+.protofolio .container h4 {
+    font-size: 1.2rem;
+    padding: 15px;
+    margin: 0;
+}
+
+.protofolio .container p {
+    color: #9b9b9b;
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 0;
+    padding: 15px;
+    padding-top: 0;
+}
+
+@media screen and (min-width: 1px) and (max-width: 641px) {
+    .protofolio .container div {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1000px) {
+    .protofolio .container div {
+        width: calc((100% - 30px) / 2);
+    }
+}
+.about {
+    background-color: white;
+    height: fit-content;
+    width: 100%;
+    margin: auto;
+}
+
+.about h2 {
+    position: relative;
+    margin: 0;
+    margin-top: 40px;
+    width: fit-content;
+    padding: 0;
+    font-weight: bold;
+    font-size: 6rem;
+    letter-spacing: -4px;
+    color: #dddddde0;
+}
+
+.about h2::after {
+    content: "Less is more work";
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translateX(-50%);
+    width: max-content;
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    letter-spacing: normal;
+    color: black;
+    font-size: 1.3rem;
+}
+
+@media screen and (min-width: 1px) and (max-width: 641px) {
+    .about h2 {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1000px) {
+    .about h2 {
+        font-size: 5.5rem;
+    }
+}
+.about .container {
+    width: 100%;
+    padding: 0 40px;
+    margin: 100px auto 60px;
+    display: flex;
+    gap: 200px;
+    justify-content: center;
+}
+.about .container img {
+    width: 260px;
+    position: relative;
+}
+.about .container .img {
+    position: relative;
+    z-index: 999;
+}
+.about .container .img::before {
+    content: "";
+    position: absolute;
+    background-color: #ebeced;
+    width: 100px;
+    height: calc(100% + 80px);
+    top: -40px;
+    left: -20px;
+}
+.about .container .img::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 300px;
+    border-left: var(--primary-colour) 100px solid;
+    border-bottom: var(--primary-colour) 100px solid;
+    top: -40px;
+    right: -145px;
+    z-index: -1;
+}
+.about .container .txt-con {
+    width: 50%;
+}
+.about .container .txt-con p:nth-of-type(1) {
+    font-weight: bold;
+    padding-bottom: 40px;
+    line-height: 2;
+}
+.about .container .txt-con hr {
+    border: var(--primary-colour) 1px solid;
+    width: 50%;
+    margin-left: 0;
+}
+.about .container .txt-con p:nth-of-type(2) {
+    font-weight: 300;
+    line-height: 2;
+}
+@media screen and (max-width: 1000px) {
+    .about .container {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .about .container .txt-con {
+        margin: auto;
+        width: 80%;
+    }
+    .about .container .txt-con hr {
+        margin: auto;
+    }
+    .about .container .img::before, .about .container .img::after {
+        display: none;
+    }
+}
+.Contact {
+    background-color: #f6f6f6;
+    height: fit-content;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.Contact h2 {
+    position: relative;
+    margin: 0;
+    margin-top: 40px;
+    width: fit-content;
+    padding: 0;
+    font-weight: bold;
+    font-size: 6rem;
+    letter-spacing: -4px;
+    color: #dddddde0;
+}
+
+.Contact h2::after {
+    content: "We are born to create";
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translateX(-50%);
+    width: max-content;
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    letter-spacing: normal;
+    color: black;
+    font-size: 1.3rem;
+}
+
+@media screen and (min-width: 1px) and (max-width: 641px) {
+    .Contact h2 {
+        font-size: 4.8rem;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1000px) {
+    .Contact h2 {
+        font-size: 5.3rem;
+    }
+}
+.Contact .Contact-txt {
+    width: 100%;
+    padding: 0 40px;
+    margin: 60px auto 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Contact .Contact-txt h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: #2c4755;
+    margin-bottom: 20px;
+}
+.Contact .Contact-txt a {
+    text-decoration: none;
+    color: #10cab7;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.Contact .Contact-txt p {
+    display: inline-block;
+}
+@media screen and (min-width: 1px) and (max-width: 641px) {
+    .Contact .Contact-txt h3 {
+        font-size: 1.5rem;
+    }
+    .Contact .Contact-txt a {
+        font-size: 1.5rem;
+    }
+    .Contact .Contact-txt p {
+        font-size: smaller;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1000px) {
+    .Contact .Contact-txt h3 {
+        font-size: 1.8rem;
+    }
+    .Contact .Contact-txt a {
+        font-size: 1.8rem;
+    }
+    .Contact .Contact-txt p {
+        font-size: smaller;
+    }
+}
+.footer {
+    width: 100%;
+    background-color: #2c4755;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.footer span {
+    color: var(--primary-colour);
+}
